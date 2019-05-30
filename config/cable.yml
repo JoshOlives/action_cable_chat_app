@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:c131d2710fbd4dec361a4dd9d6ea07fd@hammerjaw.redistogo.com:9506/
