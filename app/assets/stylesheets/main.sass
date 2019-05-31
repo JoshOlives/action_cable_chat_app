@@ -216,11 +216,51 @@ button, input[type="submit"]
 
 .messages
   background-color: #fff
-  box-shadow: 0 0 0 5px #f4f2ed inset
   box-sizing: border-box
   height: 87%
-  overflow: scroll
+  overflow-y: auto
+  overflow-x: visible
   padding: 20px
+  //position: relative
+  //could move make it smaller than move it to put box shadow around it
+  //but this is pretty much the same and much easier
+  border: 5px solid  #f4f2ed 
+  border-right: 1.5px solid #f4f2ed 
+  //box-shadow: 0 0 0 5px #f4f2ed inset
+  // &:before
+  //   content: ''
+  //   display: block
+  //   position: absolute
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   height: 100%
+  //   background-color: red
+  //   box-shadow: 0 0 0 5px #f4f2ed inset
+  //   z-index: 900
+  
+// tring to fox comments on box shadow. bleh fix later
+// .messages:after 
+//     content: ''
+//     display: block
+//     box-shadow: 0 0 0 5px #f4f2ed inset
+//     position: absolute
+//     top: 0
+//     left: 0
+//     width: 100%
+//     height: 100%
+//     z-index: 9000
+// .messages-wr 
+//     height: 65.25vh
+//     width: 80vw
+//     margin: auto
+//     box-shadow: 0 0 0 5px #f4f2ed inset 
+//                  //would have to make the box shadow realtive to view
+//     z-index: 80 //doesnt matter when parent is relative for some reason
+//     //only way for it not to scroll, but then covers up scrolling
+//     position: fixed
+//     transform: translate(-20px, -20px)
+//     background-color: rgba(0,255,0,0.1)
 
 .messages-table
   display: table
@@ -235,12 +275,17 @@ button, input[type="submit"]
   > div
     display: table-cell
     padding: 13px 10px 10px
+  display: flex
 
 .message-user
   color: #666
   font-size: 13px
   margin-right: 10px
   vertical-align: top
+  
+.message-content
+  //background-color: 	rgba(255, 230, 230, 0.1)
+  white-space: normal
   
 blockquote
   display: inline-block
@@ -258,9 +303,7 @@ code
   padding: 9px 15px
   display: inline-block
   background-color: #eee
-
-.message-content
-  width: 100%
+  
 
 .message-input
   background-color: rgba(0,0,0,0.03)

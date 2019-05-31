@@ -28,4 +28,5 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     post messages_url, params: { message: { content: "Lorem" } }, xhr: true
     assert_response :success
   end
+  
 end

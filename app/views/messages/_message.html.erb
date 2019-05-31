@@ -2,7 +2,7 @@
   <div class="message-user">
     <%= message.user.username %>:
   </div>
-  <div class="message-content">
+  <div class="message-content" style="background-color: <%=message.color%>">
     <%= sanitize markdown_to_html(message.content) %>
   </div>
 </div>
